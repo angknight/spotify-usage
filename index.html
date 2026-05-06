@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Most Played Songs On Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Your Most Played Songs On Spotify</h1>
+            <p class="subtitle">Below are the top 50 most-played songs on your Spotify account</p>
+        </header>
+
+        <section id="auth-section">
+            <p class="setup-note" id="redirect-uri-note"></p>
+            <button id="login-btn">Connect To Your Spotify Account</button>
+        </section>
+
+        <section id="tracks-section" hidden>
+            <div id="tracks-list"></div>
+            <div class="create-btn-wrapper">
+                <button id="create-playlist-btn">Save as Playlist to Your Spotify Account</button>
+            </div>
+        </section>
+
+        <div id="status" role="status" aria-live="polite"></div>
+
+        <footer class="spotify-credit">
+            Music data provided by <a href="https://www.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
