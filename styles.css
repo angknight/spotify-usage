@@ -1,0 +1,221 @@
+:root {
+    --green: #1db954;
+    --black: #121212;
+    --dark: #181818;
+    --card: #282828;
+    --text: #ffffff;
+    --muted: #b3b3b3;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+[hidden] { display: none !important; }
+
+body {
+    background: var(--black);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+/* ── Auth section ── */
+#auth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.setup-note {
+    background: var(--card);
+    border-left: 3px solid var(--green);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    padding: 12px 16px;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.setup-note:empty {
+    display: none;
+}
+
+.setup-note a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.setup-note a:hover {
+    text-decoration: underline;
+}
+
+/* ── Buttons ── */
+button {
+    background: var(--green);
+    border: none;
+    border-radius: 500px;
+    color: #000;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 14px 36px;
+    text-transform: uppercase;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+    transform: none;
+}
+
+/* ── Tracks section ── */
+#tracks-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 30px;
+}
+
+#tracks-list {
+    margin-bottom: 16px;
+}
+
+.create-btn-wrapper {
+    text-align: center;
+    padding-top: 8px;
+}
+
+/* ── Track item ── */
+.track-item {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    gap: 14px;
+    padding: 8px 12px;
+    transition: background 0.1s;
+}
+
+.track-item:hover {
+    background: var(--card);
+}
+
+.rank {
+    color: var(--muted);
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    min-width: 20px;
+    text-align: right;
+}
+
+.track-item img {
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.img-placeholder {
+    background: var(--card);
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.track-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.track-artist {
+    color: var(--muted);
+    font-size: 0.78rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Status ── */
+#status {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#status:empty {
+    display: none;
+}
+
+#status.error {
+    color: #f15e6c;
+}
+
+#status a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+#status a:hover {
+    text-decoration: underline;
+}
+
+/* ── Footer ── */
+.spotify-credit {
+    color: var(--muted);
+    font-size: 0.72rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.spotify-credit a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.spotify-credit a:hover {
+    color: var(--text);
+}
